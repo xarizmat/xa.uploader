@@ -1,0 +1,31 @@
+<!-- This is a basic upload sample
+  
+  in order for it to work properly, please make sure that you 
+  specify the proper upload URL. (action:'/url')
+
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <title>uploader sample</title>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+    <script src='../js/xa.uploader.js'></script>
+    <script src='../js/xa.uploader_ui.js'></script>
+    <script>
+    
+      $(document).ready(function(){
+        $('.uploader-box').uploader({
+          action:'/upload/url', 
+          maxbytes:20971520,
+          accept:'image/*',
+          ext:'.jpg;.jpeg;.png;.gif;.bmp'
+        });
+      });
+      
+  </head>
+  <body>
+    <div class='uploader-box'></div>
+  </body>
+  
+</html>
