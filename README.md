@@ -10,6 +10,7 @@ usage:
 
  1: Simple Uploader (no ui, if you want to build your own)
  
+```javascript
     // jQuery usage
     // browse button
     $('.upload-button').uploader_browse({
@@ -38,4 +39,9 @@ usage:
       
     }).uploader_drop({target:'body'}); // allow upload file-drop
     
-    
+    //Generic Usage
+    $.xa.uploader({
+      //parameters, just the same as in jQuery sample
+    });
+```
+
