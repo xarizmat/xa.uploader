@@ -25,7 +25,7 @@ $('.uploader-container').uploader({
   * multiple:true,                  //multiple file upload                        *
   * upload_max:2,                   //maximum number of uploads at a time         *
   * accept:'image/*',               //specify the file types uploader browses for *
-  * ext:'.jpg;.jpeg;.png;.gif;bmp', //filter extensions (works on drop and browse)*
+  * ext:'jpg;jpeg;png;gif;bmp', //filter extensions (works on drop and browse)*
   *********************************************************************************/
 });
 
