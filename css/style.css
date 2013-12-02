@@ -1,0 +1,126 @@
+.uploader {
+}
+    .uploader .uploader.control.bar {
+
+    }
+        .uploader .uploader.control.bar .progress.global {
+            font-family:monospace;
+            display: inline-block;
+            border: solid 1px #ccc;
+            height:30px;
+            width:250px;
+            background: #eaeaea; /* Old browsers */
+            background: -moz-linear-gradient(top, #eaeaea 0%, #cecece 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eaeaea), color-stop(100%,#cecece)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #eaeaea 0%,#cecece 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #eaeaea 0%,#cecece 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #eaeaea 0%,#cecece 100%); /* IE10+ */
+            background: linear-gradient(to bottom, #eaeaea 0%,#cecece 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#cecece',GradientType=0 ); /* IE6-9 */
+        }
+            .uploader .uploader.control.bar .progress.global .progress.core {
+                height:30px;
+                width:0%;
+                background: #2d2d2d; /* Old browsers */
+                background: -moz-linear-gradient(top, #2d2d2d 1%, #5b5b5b 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#2d2d2d), color-stop(100%,#5b5b5b)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top, #2d2d2d 1%,#5b5b5b 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top, #2d2d2d 1%,#5b5b5b 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top, #2d2d2d 1%,#5b5b5b 100%); /* IE10+ */
+                background: linear-gradient(to bottom, #2d2d2d 1%,#5b5b5b 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d2d2d', endColorstr='#5b5b5b',GradientType=0 ); /* IE6-9 */
+            }
+        .uploader .uploader.control.bar .button {
+            float:left;
+            height:30px;
+            padding-left:5px;
+            padding-right:5px;
+            line-height:30px;
+            overflow:hidden;
+            font-family:monospace;
+            display: inline-block;
+            cursor: pointer;
+            margin-right: 8px;
+            border: solid 1px #ccc;
+            background: #eaeaea; /* Old browsers */
+            background: -moz-linear-gradient(top, #eaeaea 0%, #cecece 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eaeaea), color-stop(100%,#cecece)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #eaeaea 0%,#cecece 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #eaeaea 0%,#cecece 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #eaeaea 0%,#cecece 100%); /* IE10+ */
+            background: linear-gradient(to bottom, #eaeaea 0%,#cecece 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#cecece',GradientType=0 ); /* IE6-9 */
+        }
+            .uploader .uploader.control.bar .button:hover {
+                background: #ffffff; /* Old browsers */
+                background: -moz-linear-gradient(top, #ffffff 0%, #d8d8d8 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#d8d8d8)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top, #ffffff 0%,#d8d8d8 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top, #ffffff 0%,#d8d8d8 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top, #ffffff 0%,#d8d8d8 100%); /* IE10+ */
+                background: linear-gradient(to bottom, #ffffff 0%,#d8d8d8 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d8d8d8',GradientType=0 ); /* IE6-9 */
+            }
+            .uploader .uploader.control.bar .button.pressed {
+                color:#eee;
+                border-color:#000;
+                background: #2d2d2d; /* Old browsers */
+                background: -moz-linear-gradient(top, #2d2d2d 1%, #5b5b5b 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#2d2d2d), color-stop(100%,#5b5b5b)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top, #2d2d2d 1%,#5b5b5b 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top, #2d2d2d 1%,#5b5b5b 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top, #2d2d2d 1%,#5b5b5b 100%); /* IE10+ */
+                background: linear-gradient(to bottom, #2d2d2d 1%,#5b5b5b 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d2d2d', endColorstr='#5b5b5b',GradientType=0 ); /* IE6-9 */
+            }
+
+
+.upload-list {
+    padding: 3px;
+    width: 525px;
+}
+
+
+    .upload-list .upload-item {
+        border:solid 1px #eee;
+        margin-bottom:-1px;
+        padding:0px;
+    }
+        .upload-list .upload-item mbs {
+            font-style:italic;
+            font-size:13px;
+            color:#2370ba;
+        }
+        .upload-list .upload-item .data-block {
+            padding:4px;
+        }
+        .upload-list .upload-item .status {
+            font-size: 11px;
+            color: #f00;
+            font-style: italic;
+            margin-top:-5px;
+        }
+        .upload-list .upload-item .block {
+            display:inline-block;
+        }
+            .upload-list .upload-item .block.name {
+                width:300px;
+                overflow:hidden;
+                height:20px;
+            }
+        
+            .upload-list .upload-item .block.size {
+                float:right;
+            }
+            .upload-list .upload-item .block.progress {
+                display:block;
+                width:100%;
+                height:4px;
+                background:#eee;
+                padding:0px !important;
+            }
+                .upload-list .upload-item .block.progress .core {
+                    background:#555;
+                    height:100%;
+                    width:0px;
+                }
