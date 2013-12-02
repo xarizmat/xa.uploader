@@ -6,42 +6,79 @@ jQuery File Uploader with Drag-Drop
 
 This is a two-part file uploader which allows you to upload files to any http server.
 
-usage:
+* requirements:
+ * jQuery (should work with most versions)
+ * xa.uploader.js (main uploader library)
+ * xa.uploader_ui.js (only required for the UI uploader)
 
- 1: Simple Uploader (no ui, if you want to build your own)
+
+UI Uploader is easy to use.
+===========================
+```javascript
+
+$('.uploader-container').uploader({
+ action:'/upload-url',  //upload URL
+ maxbytes:20971520,     //maximum file size
+ 
+ /* Allowed Parameters  ***********************************************************
+  * maxbytes:20971520,              //max upload size in bytes                    *
+  * multiple:true,                  //multiple file upload                        *
+  * upload_max:2,                   //maximum number of uploads at a time         *
+  * accept:'image/*',               //specify the file types uploader browses for *
+  * ext:'.jpg;.jpeg;.png;.gif;bmp', //filter extensions (works on drop and browse)*
+  *********************************************************************************/
+});
+
+```
+
+Usage
+=====
+
+ 1.1: Simple Uploader (no ui, if you want to build your own)
+      This automatically uses the given jQuery element as the
+      browse button
  
 ```javascript
     // jQuery usage
     // browse button
     $('.upload-button').uploader_browse({
       action:'/upload/url',
-      maxbytes:20971520,              //max upload size (20mb)
+      maxbytes:20971520,              //max upload size in bytes
       multiple:true,                  //multiple file upload
       upload_max:2,                   //maximum number of uploads at a time
       accept:'image/*',               //specify the file types uploader browses for
       ext:'.jpg;.jpeg;.png;.gif;bmp', //filter extensions (works on drop and browse)
       file_added(file_data,uploader){
-        //fires when a file is added to the list.
+        // fires when a file is added to the list.
       },
       progress(file_data,params){
-        //fires when progress changes
+        // fires when progress changes
       },
       complete(file_data,params){
-        //fires when an item is done uploading.
-        //file_data will be null when all files have uploaded
+        // fires when an item is done uploading.
+        // file_data will be null when all files have uploaded
       },
       failed(file_data,params){
-        //fires when an upload fails.
+        // fires when an upload fails.
       },
       cancelled(file_data,params){
-        //fires when upload is cancelled
+        // fires when upload is cancelled
       }
       
     }).uploader_drop({target:'body'}); // allow upload file-drop
+
+```
+
+ 1.2: Same as above, but does not use a jQuery element
+```javascript
     
-    //Generic Usage
-    $.xa.uploader({
-      //parameters, just the same as in jQuery sample
+    // Generic Usage
+    var uploader = $.xa.uploader({
+      // parameters, just the same as in jQuery sample
     });
+    // call this event 
+    // to browse for a file to upload
+    uploader.upload(); 
+
 ```
 
