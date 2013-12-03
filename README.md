@@ -1,7 +1,7 @@
 xa.uploader
 ===========
 
-Live Demo <a href='http://csitb.com/demo/upload'>here</a>
+Live Demo <a href='http://csitb.com/demo/uploader'>here</a>
 
 jQuery File Uploader with Drag-Drop
 
