@@ -50,20 +50,20 @@ Usage
       upload_max:2,                   //maximum number of uploads at a time
       accept:'image/*',               //specify the file types uploader browses for
       ext:'jpg;jpeg;png;gif;bmp', //filter extensions (works on drop and browse)
-      file_added(file_data,uploader){
+      file_added:function(file_data,uploader){
         // fires when a file is added to the list.
       },
-      progress(file_data,params){
+      progress:function(file_data,params){
         // fires when progress changes
       },
-      complete(file_data,params){
+      complete:function(file_data,params){
         // fires when an item is done uploading.
         // file_data will be null when all files have uploaded
       },
-      failed(file_data,params){
+      failed:function(file_data,params){
         // fires when an upload fails.
       },
-      cancelled(file_data,params){
+      cancelled:function(file_data,params){
         // fires when upload is cancelled
       }
       
