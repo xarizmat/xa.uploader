@@ -31,12 +31,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="js\test.js" />
+    <Compile Include="js\xa.uploader.es5.min.js">
+      <SubType>Code</SubType>
+      <DependentUpon>C:\Users\leonid.barsukov\Documents\GitHubVisualStudio\xa.uploader\js\xa.uploader.es5.js</DependentUpon>
+    </Compile>
     <Compile Include="js\xa.uploader.js" />
     <Compile Include="js\xa.uploader_ui.js" />
     <Compile Include="public\javascripts\jquery-2.1.4.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
     <Compile Include="bin\www" />
+    <None Include="compilerconfig.json" />
+    <Content Include="compilerconfig.json.defaults">
+      <SubType>Content</SubType>
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </Content>
     <Content Include="package.json" />
     <Content Include="public\stylesheets\style.styl" />
     <Content Include="README.md" />

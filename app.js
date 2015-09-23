@@ -4,10 +4,11 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var router = express.Router();
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
+var multer = require('multer');
 var app = express();
 
 // view engine setup
@@ -16,6 +17,8 @@ app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
+
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -24,8 +27,29 @@ app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'js')));
 
+
+
 app.use('/', routes);
 app.use('/users', users);
+var m = multer({
+	dest: './uploads/',
+	rename: function (fieldname, filename) {
+		return filename + Date.now();
+	},
+	onFileUploadStart: function (file) {
+		console.log(file.originalname + ' is starting ...')
+	},
+	onFileUploadComplete: function (file) {
+		console.log(file.fieldname + ' uploaded to  ' + file.path)
+		done = true;
+	}
+});
+app.post('/upload', m.array(), function (req, res) { 
+	var x = req;
+});
+//console.log(m);
+//app.use(m);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
